@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="card" style="width: 18rem; margin: auto">
             <div class="card-body">
                 <h5 class="card-title">Register</h5>
-                <form action="/register.php" method="POST">
+                <form action="register.php" method="POST">
                     <div class="form-group">
                         <label>Username</label>
                         <input type="text" class="form-control" name="username">

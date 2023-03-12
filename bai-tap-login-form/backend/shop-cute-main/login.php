@@ -42,7 +42,7 @@ if (isset($_SESSION['username']))
         <div class="card" style="width: 18rem; margin: auto">
             <div class="card-body">
                 <h5 class="card-title">Login</h5>
-                <form action="/login.php" method="POST">
+                <form action="login.php" method="POST">
                     <div class="form-group">
                         <label for="username">Username</label>
                         <input type="text" class="form-control" id="username" name="username">
