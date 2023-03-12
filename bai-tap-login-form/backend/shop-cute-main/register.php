@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['username']))
-    die(header('location: shopping.php'));
+    die(header('location: index.php'));
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (strlen($_POST['username']) > 20)
         $message = "Sorry name too long";
@@ -31,7 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
-include "header.html";
 ?>
 
 <html>
@@ -41,16 +40,8 @@ include "header.html";
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="#">
-            <img src="/img/logo.jpg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-            Cute Store
-        </a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                </li>
-            </ul>
-        </div>
+        
+        
         <form class="form-inline my-2 my-lg-0">
             <a class="btn btn-outline-light my-2 my-sm-0" href="login.php">Sign In</a>
         </form>
@@ -59,7 +50,7 @@ include "header.html";
         <div class="card" style="width: 18rem; margin: auto">
             <div class="card-body">
                 <h5 class="card-title">Register</h5>
-                <form action="register.php" method="POST">
+                <form action="/register.php" method="POST">
                     <div class="form-group">
                         <label>Username</label>
                         <input type="text" class="form-control" name="username">
