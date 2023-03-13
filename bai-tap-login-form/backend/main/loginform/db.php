@@ -1,7 +1,6 @@
 <?php
 try{
-$connectionString = "mysql:host=localhost;dbname=loginDB";
-$conn = new \PDO($connectionString, "crystal", "password");
+$conn = new PDO("mysql:host=db;dbname=loginDB", "crystal", "password");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch(PDOException $e){

@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 if (isset($_SESSION['username']))
-    die(header("location: index.php"));
+    header("location: index.php");
 
 
 ?>
