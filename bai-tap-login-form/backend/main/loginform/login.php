@@ -1,11 +1,5 @@
 <?php
-<<<<<<< HEAD
-/*session_start();
-=======
-ob_start();
 session_start();
-
->>>>>>> 0bdbcf7 (remove phpadmin fix header warning)
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         include "db.php";
@@ -42,7 +36,7 @@ if (isset($_SESSION['username'])){
     
 
 
-*/?>
+?>
 <html>
 
 <head>
