@@ -1,5 +1,11 @@
 <?php
+<<<<<<< HEAD
 /*session_start();
+=======
+ob_start();
+session_start();
+
+>>>>>>> 0bdbcf7 (remove phpadmin fix header warning)
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         include "db.php";
@@ -17,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $row = $sth->fetch(); {
                     $_SESSION['username'] = $row['username'];
                     header("location: index.php");
+                    ob_end_flush();
                 }
             } else {
                 $message = "Wrong username or password";
@@ -27,8 +34,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $message =  $sql . "<br>" . $e->getMessage();
     }
 }
-if (isset($_SESSION['username']))
+if (isset($_SESSION['username'])){
     header("location: index.php");
+    ob_end_flush();
+
+}
+    
 
 
 */?>
