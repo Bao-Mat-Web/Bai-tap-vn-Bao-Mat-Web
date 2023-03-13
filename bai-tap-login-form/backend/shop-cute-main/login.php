@@ -1,5 +1,5 @@
 <?php
-session_start();
+/*session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     try {
         include "db.php";
@@ -31,10 +31,11 @@ if (isset($_SESSION['username']))
     die(header("location: index.php"));
 
 
-?>
+*/?>
 <html>
 
 <head>
+    <script src = "check.js"></script>
 </head>
 
 <body>
@@ -51,8 +52,8 @@ if (isset($_SESSION['username']))
                         <label for="password">Password</label>
                         <input type="password" class="form-control" id="password" name="password">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <?php if (isset($message)) echo $message; ?>
+                    <button type="submit" class="btn btn-primary" onclick="return check();">Submit</button>
+                    <?php /*if (isset($message)) echo $message; */?>
                 </form>
                 <div class="form-group">
                     <h6 for="exampleInputEmail1">Don't have account</h6>
