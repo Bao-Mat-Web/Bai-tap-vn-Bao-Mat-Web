@@ -10,7 +10,6 @@ function check()
     }
     else if (n1.match(allow))
     {
-        alert("Ten dang nhap hop le");
         return true;
     }
     else

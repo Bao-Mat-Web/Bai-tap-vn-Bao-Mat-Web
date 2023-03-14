@@ -59,7 +59,7 @@ if (isset($_SESSION['username'])){
                         <input type="password" class="form-control" id="password" name="password">
                     </div>
                     <button type="submit" class="btn btn-primary" onclick="return check();">Submit</button>
-                    <?php /*if (isset($message)) echo $message; */?>
+                    <?php if (isset($message)) echo $message; ?>
                 </form>
                 <div class="form-group">
                     <h6 for="exampleInputEmail1">Don't have account</h6>
