@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['username']))
-  header("location: login.php");
+  header("location: BT1-20521484.html");
 ?>
 <html>
 

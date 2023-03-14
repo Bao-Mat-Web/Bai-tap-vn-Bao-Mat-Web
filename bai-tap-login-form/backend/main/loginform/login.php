@@ -34,40 +34,8 @@ if (isset($_SESSION['username'])){
     ob_end_flush();
 
 }
-    
+
+if (isset($message)) echo $message;
 
 
 ?>
-<html>
-
-<head>
-    <script src = "check.js"></script>
-</head>
-
-<body>
-    <div class="container" style="margin-top: 10%">
-        <div class="card" style="width: 18rem; margin: auto">
-            <div class="card-body">
-                <h5 class="card-title">Login</h5>
-                <form action="login.php" method="POST">
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" class="form-control" id="username" name="username">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password">
-                    </div>
-                    <button type="submit" class="btn btn-primary" onclick="return check();">Submit</button>
-                    <?php if (isset($message)) echo $message; ?>
-                </form>
-                <div class="form-group">
-                    <h6 for="exampleInputEmail1">Don't have account</h6>
-                    <a class="btn btn-outline-light my-2 my-sm-0" href="register.php">Sign Up</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-
-</html>
