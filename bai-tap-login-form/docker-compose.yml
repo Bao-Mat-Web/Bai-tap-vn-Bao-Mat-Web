@@ -1,0 +1,25 @@
+version: '3'
+services:
+    php-apache-environment:
+        container_name: loginform
+        build: ./main
+        depends_on:
+          - db
+        volumes:
+          - ./main/loginform:/var/www/html
+        ports:
+            - 8080:80
+                    
+    db:
+        image: mysql
+        command: --default-authentication-plugin=mysql_native_password
+        environment:
+        - MYSQL_DATABASE=loginDB
+        - MYSQL_USER=crystal
+        - MYSQL_PASSWORD=password
+        - MYSQL_ALLOW_EMPTY_PASSWORD=1
+        volumes:
+        - "./main/loginform/db:/docker-entrypoint-initdb.d"
+        
+
+  
